@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zzu.seckill.dao.SeckillDao">
+
+    <update id="seckill" parameterType="java.lang.Long">
+        UPDATE goods SET num = num-1 WHERE num > 0 AND goods_id = #{goodsId}
+    </update>
+</mapper>
